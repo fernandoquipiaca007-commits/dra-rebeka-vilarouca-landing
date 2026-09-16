@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import fotoPerfil from '../assets/Foto de perfil.jpeg';
 
 export function Authority() {
@@ -24,7 +24,7 @@ export function Authority() {
             variants={scrollVariant}
             className="lg:col-span-5 flex justify-center lg:order-2"
           >
-            <div className="w-full max-w-[420px] rounded-[24px] overflow-hidden shadow-md">
+            <div className="w-full max-w-[420px] rounded-[24px] overflow-hidden shadow-lg border border-slate-100">
               <img
                 src={fotoPerfil}
                 alt="Rebeka Vilarouca"
@@ -42,12 +42,12 @@ export function Authority() {
             className="lg:col-span-7 space-y-6 lg:order-1"
           >
             {/* Biography Title */}
-            <h2 className="font-serif text-3xl md:text-4xl text-maroon font-semibold tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl text-[#0b2b35] font-bold tracking-tight">
               Rebeka Vilarouca
             </h2>
 
             {/* Biography Paragraphs */}
-            <div className="space-y-6 text-[#21303e] font-sans text-sm md:text-base leading-relaxed text-justify">
+            <div className="space-y-6 text-[#1e293b] font-sans text-sm md:text-base leading-relaxed text-justify">
               <p>
                 Advogada Previdenciarista e criadora do Protocolo TARP - Trabalhador de Alto Risco Protegido, um método de planejamento previdenciário desenvolvido especialmente para trabalhadores expostos a riscos que desejam construir uma aposentadoria com segurança, estratégia e previsibilidade.
               </p>

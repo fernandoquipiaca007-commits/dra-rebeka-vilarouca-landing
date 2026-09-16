@@ -1,0 +1,52 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-maroon: #7c4847;
+  --color-maroon-dark: #633938;
+  --color-beige: #fbedec;
+  --color-beige-light: #fdf6f6;
+  --color-text-dark: #212424;
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom inputs matching the original simple borders */
+.form-input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 14px 16px;
+  outline: none;
+  color: #212424;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  border-color: var(--color-maroon);
+  box-shadow: 0 0 0 3px rgba(124, 72, 71, 0.15);
+}
+
+/* Custom scrollbar matching maroon */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-maroon-dark);
+}

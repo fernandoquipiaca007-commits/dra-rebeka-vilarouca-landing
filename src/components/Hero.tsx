@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Lock, ArrowRight, User, Mail, Phone, Check, Loader2, MessageCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import logoImg from '../assets/Logo-removebg-preview.png';
+import logoImg from '../assets/logo_nova.jpeg';
 
 export function Hero() {
   const [formState, setFormState] = useState<'form' | 'loading' | 'success'>('form');
@@ -61,12 +61,12 @@ export function Hero() {
   return (
     <section className="relative pt-6 pb-20 px-6 md:px-12 bg-[#f4f8f9] max-w-[1280px] mx-auto flex flex-col items-center">
 
-      {/* Header Logo Rebeka Vilarouca (Transparent PNG) */}
+      {/* Header Logo Rebeka Vilarouca (New Logo) */}
       <div className="flex justify-center pt-4 pb-6 w-full border-b border-[#0b2b35]/10">
         <img
           src={logoImg}
           alt="Rebeka Vilarouca Logo"
-          className="h-28 md:h-36 w-auto object-contain drop-shadow-sm"
+          className="h-28 md:h-36 w-auto object-contain rounded-xl shadow-xs"
         />
       </div>
 

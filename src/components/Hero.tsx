@@ -61,12 +61,12 @@ export function Hero() {
   return (
     <section className="relative pt-6 pb-20 px-6 md:px-12 bg-[#f4f8f9] max-w-[1280px] mx-auto flex flex-col items-center">
 
-      {/* Header Logo Rebeka Vilarouca (Transparent PNG) */}
-      <div className="flex justify-center pt-4 pb-6 w-full border-b border-[#0b2b35]/10">
+      {/* Header Logo Rebeka Vilarouca (Larger Size) */}
+      <div className="flex justify-center pt-6 pb-8 w-full border-b border-[#0b2b35]/10">
         <img
           src={logoImg}
           alt="Rebeka Vilarouca Logo"
-          className="h-28 md:h-36 w-auto object-contain drop-shadow-sm"
+          className="h-44 md:h-56 lg:h-64 w-auto object-contain drop-shadow-sm"
         />
       </div>
 

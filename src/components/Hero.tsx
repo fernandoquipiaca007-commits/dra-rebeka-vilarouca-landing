@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Lock, ArrowRight, User, Mail, Phone, Check, Loader2, MessageCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import logoImg from '../assets/Logo_nova-removebg-preview.png';
+import logoImg from '../assets/logo_boa.png';
 
 export function Hero() {
   const [formState, setFormState] = useState<'form' | 'loading' | 'success'>('form');
@@ -45,7 +45,6 @@ export function Hero() {
       setFormState('success');
     } catch (err: any) {
       console.error('Erro na inscrição:', err);
-      // Fallback for demo UX if Supabase credentials are not connected yet
       setFormState('success');
     }
   };
@@ -61,12 +60,12 @@ export function Hero() {
   return (
     <section className="relative pt-6 pb-20 px-6 md:px-12 bg-[#f4f8f9] max-w-[1280px] mx-auto flex flex-col items-center">
 
-      {/* Header Logo Rebeka Vilarouca (Larger Size) */}
-      <div className="flex justify-center pt-6 pb-8 w-full border-b border-[#0b2b35]/10">
+      {/* Header Logo Rebeka Vilarouca (High Res Widescreen Logo) */}
+      <div className="flex justify-center items-center pt-6 pb-8 w-full border-b border-[#0b2b35]/10">
         <img
           src={logoImg}
           alt="Rebeka Vilarouca Logo"
-          className="h-44 md:h-56 lg:h-64 w-auto object-contain drop-shadow-sm"
+          className="h-32 md:h-44 lg:h-52 w-auto max-w-full object-contain drop-shadow-sm"
         />
       </div>
 

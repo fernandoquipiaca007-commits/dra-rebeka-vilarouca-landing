@@ -25,12 +25,12 @@ serve(async (req) => {
 
     const hashedEmail = email ? await sha256(email) : null;
     const cleanPhone = phone ? phone.replace(/\D/g, '') : '';
-    const formattedPhone = cleanPhone ? (cleanPhone.startsWith('55') ? cleanPhone : 55) : '';
+    const formattedPhone = cleanPhone ? (cleanPhone.startsWith('55') ? cleanPhone : '55' + cleanPhone) : '';
     const hashedPhone = formattedPhone ? await sha256(formattedPhone) : null;
     const firstName = name ? name.trim().split(' ')[0] : '';
     const hashedFirstName = firstName ? await sha256(firstName) : null;
 
-    const eventId = event_id || lead__;
+    const eventId = event_id || 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
 
     const payload = {
       data: [
@@ -52,7 +52,7 @@ serve(async (req) => {
       ]
     };
 
-    const capiUrl = https://graph.facebook.com/v19.0//events?access_token=;
+    const capiUrl = 'https://graph.facebook.com/v19.0/' + META_PIXEL_ID + '/events?access_token=' + META_ACCESS_TOKEN;
 
     const res = await fetch(capiUrl, {
       method: 'POST',

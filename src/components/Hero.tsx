@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Lock, ArrowRight, User, Mail, Phone, Check, Loader2, MessageCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { trackLeadEvent } from '../lib/metaPixel';
 import logoImg from '../assets/logo_boa.png';
 
 export function Hero() {
@@ -34,6 +35,7 @@ export function Hero() {
     const whatsapp = phone;
 
     try {
+      trackLeadEvent({ name, email, phone: whatsapp });
       const { error: supabaseError } = await supabase
         .from('subscribers')
         .insert([{ name, email, whatsapp }]);

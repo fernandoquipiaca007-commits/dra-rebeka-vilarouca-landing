@@ -20,7 +20,7 @@ serve(async (req) => {
   try {
     const { name, email, phone, event_id, event_source_url } = await req.json();
 
-    const META_PIXEL_ID = Deno.env.get('META_PIXEL_ID') || '1011775295216711';
+    const META_PIXEL_ID = Deno.env.get('META_PIXEL_ID') || '978841921917089';
     const META_ACCESS_TOKEN = Deno.env.get('META_ACCESS_TOKEN') || 'EAAW7BoCyOHIBSnQb66JD6mckeNyEaC6b1hpRljURQ6q9K8CIe5bYzzYZBztOPNCZA8nic5W0LBuFK5diSaM5IYQivNxwi3QsMOEsDR39yxDbjZAAWJPBfQpxeUQuYpwD6yWceI9kumYXuYQODSL34eWCOrq58q0mbgrR1qd3SY5RBESkz3PSC9D4WUaZCxEaTwZDZD';
 
     const hashedEmail = email ? await sha256(email) : null;
